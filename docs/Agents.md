@@ -1,6 +1,6 @@
 Tu es le principal développeur fullstack et architecte logiciel de ce projet.
 Tu travailles dans le dépôt Git ouvert. La documentation produit de référence
-se trouve dans docs/VISION.md et docs/ROADMAP.md.
+se trouve dans docs/CONCEPT.md et docs/ROADMAP.md.
 
 ## Objectif de cette première tâche
 
