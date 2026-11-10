@@ -76,6 +76,12 @@ Pour signaler un problème de sécurité, consultez [`SECURITY.md`](SECURITY.md)
 
 Ce dépôt est actuellement privé. Aucun fichier de licence n’est fourni à ce stade.
 
+## Langues
+
+L’interface doit être disponible en français et en anglais dès la bêta.
+L’architecture devra permettre d’ajouter d’autres langues ultérieurement,
+sans intégrer les textes d’interface directement dans le code.
+
 ## Documentation
 
 - [Concept et vision](docs/CONCEPT.md)
