@@ -1,144 +1,77 @@
-# Vision du projet
+# AstroNote — concept et vision
 
-> Document de référence du concept global. Il couvre la vision à long terme,
-> et pas uniquement le périmètre de la bêta.
+> Nom de travail provisoire. Ce document distingue la structure et le périmètre
+> de bêta confirmés de la vision à plus long terme.
 
-## 1. Résumé
+## Intention
 
-Créer une application personnalisable et multiplateforme — mobile, bureau et Web —
-qui sert de compagnon pour organiser différents aspects de la vie personnelle,
-professionnelle et collective.
+AstroNote est conçu comme un compagnon personnel et collaboratif pour organiser
+des sujets de vie et d’activité dans des contextes distincts. Le produit vise
+initialement un usage personnel ou un petit groupe de testeurs. La confidentialité,
+la clarté et une personnalisation progressive sont des principes directeurs.
 
-L’application réunit, dans une structure cohérente, des outils de planification,
-d’organisation, de suivi, de partage et de gestion. L’utilisateur choisit les
-espaces, les contenus, les outils et l’affichage qui lui sont utiles, sans être
-submergé par des informations sans rapport.
+## Modèle d’organisation retenu pour la bêta
 
-Le nom « AstroNote » est provisoire et reste à repenser.
+**Espace → Sphère → Capsule**
 
-## 2. Principes directeurs
+- **Espace** : contexte de premier niveau (par exemple personnel ou
+  professionnel).
+- **Sphère** : domaine, sujet ou projet organisé au sein d’un Espace.
+- **Capsule** : unité fonctionnelle rattachée à une Sphère.
 
-- **Organisation maîtrisée :** isoler les sujets et éviter le bruit informationnel.
-- **Personnalisation progressive :** proposer une expérience simple au départ,
-  puis davantage d’options lorsque cela devient utile.
-- **Modularité :** pouvoir ajouter, retirer, déplacer et faire évoluer les outils.
-- **Vue locale et transversale :** consulter un sujet dans son contexte ou
-  agréger des informations provenant de plusieurs sphères.
-- **Partage contrôlé :** permettre la collaboration sans exposer les contenus
-  non concernés.
-- **Sécurité et confidentialité :** traiter les données personnelles avec
-  prudence, appliquer le moindre privilège et documenter les choix de sécurité.
-- **Maintenabilité :** privilégier une architecture testable, documentée et
-  extensible.
-- **Ouverture :** privilégier les outils, standards et intégrations open source
-  lorsque cela convient au besoin.
+Les règles précises de partage, d’agrégation et de permissions ne sont pas
+établies par les informations disponibles et ne doivent pas être présumées.
 
-## 3. Modèle d’organisation retenu pour la bêta
+## Périmètre bêta
 
-### Espace
+Les Capsules confirmées pour la bêta sont **Todo**, **Agenda**, **Référentiel
+d’outils en ligne** et **WishList**. Les détails fonctionnels de ces modules,
+à l’exception des caractéristiques de WishList indiquées ci-dessous, restent
+à préciser.
 
-Niveau supérieur, destiné à séparer de grands contextes de vie ou d’activité.
+### WishList
 
-Exemples : Personnel, Professionnel, Association.
+La WishList est un tableau visuel de souhaits, avec une présentation de type
+moodboard / Pinterest. Les entrées comprennent un titre, des liens, des images
+et des détails. La présentation distingue une image principale et des images
+secondaires ou alternatives.
 
-### Sphère
+Le **suivi des prix est post-bêta**. Aucune surveillance automatique, source de
+prix, devise, historique ou alerte de prix n’est implicitement promise par cette
+description. La manière de stocker, charger ou valider les images et les liens
+reste à concevoir.
 
-Niveau organisé à l’intérieur d’un Espace. Une Sphère regroupe un sujet, un
-projet ou un domaine.
+## Vision à plus long terme
 
-Exemples : Carrière, Jeux vidéo, Recherche d’appartement, Vacances été 2026,
-Couture, Gestion globale.
+La vision peut évoluer vers des fonctionnalités telles que le mode Focus,
+des vues transversales, une personnalisation étendue, des galeries, des
+intégrations ou extensions, ainsi que des fonctions de partage plus élaborées.
+Le suivi des prix de la WishList relève également de l’après-bêta. Ces idées ne
+sont pas des engagements pour la bêta.
 
-### Capsule
+## Principes de conception
 
-Unité fonctionnelle que l’on ajoute à une Sphère. Le terme **Capsule** est
-retenu pour la bêta à la place de « brique ».
+- **Contexte maîtrisé :** présenter les informations dans leur Espace et leur
+  Sphère afin de réduire le bruit.
+- **Progressivité :** commencer par des parcours simples et ajouter des options
+  sur la base de besoins confirmés.
+- **Modularité :** séparer les responsabilités des Capsules sans présumer d’un
+  système d’extensions déjà décidé.
+- **Confidentialité et sécurité :** appliquer le moindre privilège et définir
+  les frontières de données avant le partage.
+- **Maintenabilité :** documenter les décisions techniques et vérifier le
+  comportement par des tests adaptés.
 
-Exemples : Capsule Agenda, Capsule Todo, Capsule Référentiel.
+## Décisions non établies par les informations reçues
 
-Une Capsule peut éventuellement être visible à plusieurs niveaux : par exemple,
-une Capsule Agenda dans une Sphère et une vue agrégée de plusieurs agendas au
-niveau de l’Espace. Les règles exactes de partage ou de synchronisation de ces
-données restent à définir avant leur implémentation.
+La stack, l’architecture détaillée, les plateformes de lancement, le mode
+d’authentification, les rôles de partage, les règles de synchronisation,
+l’hébergement, la licence, le nom final et les contraintes techniques des
+médias ne sont pas validés dans cette mise à jour.
 
-## 4. Expérience visée
+## Portée et statut de ce document
 
-- Chaque Espace, Sphère et Capsule doit pouvoir être consulté dans son contexte.
-- L’utilisateur doit pouvoir accéder à une vue d’ensemble sans mélanger
-  involontairement les données.
-- Les pages d’accueil ou portails pourront proposer des widgets et des raccourcis.
-- Les préférences visuelles et l’organisation de l’interface pourront évoluer
-  progressivement.
-- Un mode **Focus** est conservé dans la vision du produit : il aide à se
-  concentrer sur un espace, un sujet ou une sélection de tâches, en limitant les
-  distractions. Son fonctionnement précis reste à concevoir.
-
-## 5. Domaines fonctionnels envisagés à long terme
-
-La vision peut inclure, au fil du temps :
-
-- tâches et projets : listes, tableaux Kanban, suivi;
-- calendriers et planification;
-- listes orientées, dont une **WishList**;
-- référentiel de sites et d’outils en ligne, avec tags, favoris, usage fréquent
-  et statut « à tester »;
-- gestion et partage de contenus;
-- galerie;
-- gestion de comptes et coffre-fort;
-- budgétisation et suivi financier;
-- notes ou contenus structurés, si leur périmètre est clairement défini;
-- widgets, tableaux de bord et agrégations entre Sphères;
-- extensions et intégrations tierces, de préférence open source.
-
-Cette liste est une vision, pas une promesse que chaque fonctionnalité sera
-présente dans la bêta.
-
-## 6. Modules, extensions et intégrations
-
-À long terme, l’architecture devra permettre l’ajout de nouvelles Capsules sans
-imposer de réécrire l’application entière. Les limites d’extension — données,
-permissions, interfaces et intégrations — devront être conçues et documentées
-avant d’ouvrir l’écosystème à des extensions tierces.
-
-Une intégration externe devra être évaluée selon sa sécurité, sa maintenabilité,
-son coût, ses conditions d’utilisation et la quantité de données qu’elle reçoit.
-
-## 7. Partage et permissions
-
-Le produit devra pouvoir prendre en charge des espaces partagés avec des droits
-adaptés aux personnes concernées. Les permissions devront être explicites,
-compréhensibles et limitées au besoin.
-
-Les rôles, l’héritage des droits entre niveaux, les invitations, la révocation
-d’accès et la visibilité des contenus sont à spécifier avant le développement
-du partage collaboratif.
-
-## 8. Sécurité, confidentialité et qualité
-
-Exigences transversales :
-
-- minimisation des données collectées;
-- contrôle d’accès et séparation des données entre Espaces;
-- gestion sûre des secrets et des identifiants;
-- validation des données et protection des API;
-- sauvegarde, export et suppression des données à définir;
-- tests automatisés, revue des dépendances et journalisation prudente;
-- documentation des menaces et des décisions d’architecture;
-- ne jamais considérer un masquage visuel comme une mesure de sécurité.
-
-Le traitement des mots de passe, informations financières et autres données
-sensibles nécessitera une analyse de sécurité dédiée avant leur mise en bêta.
-
-## 9. Public et stade de lancement
-
-Le premier usage visé est personnel ou limité à un petit groupe : amis,
-collaborateurs et testeurs. Cela permet de valider l’utilité, l’organisation
-générale et l’ergonomie avant une éventuelle ouverture plus large.
-
-## 10. Identité et vocabulaire
-
-- Nom de travail : **AstroNote** — provisoire.
-- Vocabulaire bêta : **Espace → Sphère → Capsule**.
-- « Capsule » est le terme retenu pour la bêta; il pourra être réévalué après
-  des tests utilisateurs.
-- Identité visuelle, ton éditorial et nom final : à définir.
+Ce brouillon est préparé à partir des fichiers Markdown fournis et des décisions
+produit du contexte récent. Le dépôt lui-même et son état de développement
+n’ont pas été consultés ; ce document ne décrit donc pas des fonctionnalités
+comme déjà implémentées.
