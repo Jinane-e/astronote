@@ -1,66 +1,43 @@
-Tu es le principal développeur fullstack et architecte logiciel de ce projet.
-Tu travailles dans le dépôt Git ouvert. La documentation produit de référence
-se trouve dans docs/CONCEPT.md et docs/ROADMAP.md.
+# Consignes de travail — AstroNote
 
-## Objectif de cette première tâche
+La documentation produit de référence préparée pour ce dépôt est
+[`docs/CONCEPT.md`](docs/CONCEPT.md) (vision et concept) et
+[`docs/ROADMAP.md`](docs/ROADMAP.md) (périmètre et priorités). Consulter aussi le
+README à la racine. Vérifier les chemins réels dans le dépôt avant toute
+modification.
 
-Faire un audit du dépôt et préparer un plan de fondation pour l’application.
-Ne commence pas par générer toute l’application : comprends d’abord le contexte,
-identifie les décisions manquantes et propose une première tranche de travail
-petite, vérifiable et réversible.
+## Contexte produit connu
 
-## Contexte produit
+- Le modèle d’organisation retenu pour la bêta est **Espace → Sphère → Capsule**.
+- Les Capsules confirmées pour la bêta sont **Todo**, **Agenda**,
+  **Référentiel d’outils en ligne** et **WishList**.
+- La WishList est une vue moodboard / Pinterest : les entrées ont un titre, des
+  liens, des images et des détails, avec une image principale et des images
+  secondaires ou alternatives.
+- Le **suivi des prix est post-bêta**.
+- Le dépôt est destiné initialement à un usage personnel ou à un petit groupe
+  de testeurs.
 
-L’application est un compagnon personnel et collaboratif, destiné initialement
-à un usage personnel ou à un groupe limité de testeurs. Le modèle d’organisation
-retenu pour la bêta est :
-
-Espace → Sphère → Capsule
-
-Les Capsules bêta envisagées sont Todo, Agenda et Référentiel d’outils en ligne.
-La WishList est une piste à confirmer. La vision à long terme comprend notamment
-Focus, partage et droits, personnalisation, galerie, gestion de comptes,
-budgétisation, intégrations et extensions. Consulte les fichiers de référence
-pour le détail et distingue strictement la vision du périmètre bêta.
+La documentation préparée ne constitue pas un audit du code. Ne pas affirmer
+qu’une fonctionnalité est implémentée sans l’avoir vérifiée dans le dépôt.
+Les décisions techniques, les détails fonctionnels qui restent à spécifier et
+les limites de la documentation sont signalés dans les documents de référence.
 
 ## Règles de travail
 
-1. Commence par inspecter l’état Git, les fichiers, la documentation, les
-   scripts, les tests et les conventions déjà présentes.
-2. Ne détruis et ne réécris aucun travail existant.
-3. N’invente pas qu’une décision a été prise lorsqu’elle est marquée « à définir »
-   ou « à confirmer » dans la documentation.
-4. Avant de choisir une pile technique ou une dépendance importante, compare
-   brièvement les options pertinentes selon maintenabilité, sécurité,
-   multiplateforme, accessibilité, coût et adéquation au projet.
-5. Privilégie des technologies maintenues, une architecture simple et des
-   dépendances limitées. Favorise l’open source lorsque cela convient.
-6. Traite la sécurité, la confidentialité, les permissions et les migrations de
-   données comme des exigences de conception, pas comme une phase finale.
-7. N’ajoute pas de secrets, clés, données personnelles réelles ou mots de passe
-   au dépôt.
-8. Respecte les changements utilisateur déjà présents; n’effectue pas de
-   réinitialisation Git, de suppression massive ou d’action irréversible.
-9. N’effectue pas de commit et ne pousse rien sans demande explicite.
-10. Si une ambiguïté bloque une décision produit ou de sécurité, explique-la et
-    pose une question ciblée au lieu de supposer.
-
-## Livrable de cette première tâche
-
-Présente :
-
-- un résumé de l’état du dépôt et de son historique Git;
-- les écarts ou contradictions éventuels entre le dépôt et la documentation;
-- les principales décisions techniques encore ouvertes;
-- une proposition d’architecture et de pile, avec justification et alternatives;
-- les risques de sécurité initiaux et les mesures à prévoir;
-- une première tranche de travail découpée en tâches petites et testables;
-- les commandes de vérification à utiliser.
-
-Si une modification de fichiers est utile, propose-la d’abord ou limite-toi à
-la documentation et à des fondations non destructives. Après toute modification,
-exécute les vérifications pertinentes et résume précisément les fichiers
-touchés, les tests exécutés, les résultats et ce qui reste à faire.
-
-Ne revendique jamais qu’un test, une commande ou une revue a réussi s’il n’a
-pas réellement été exécuté.
+1. Inspecter l’état Git, les fichiers, les conventions, les scripts et les tests
+   avant de proposer ou d’appliquer un changement.
+2. Respecter le travail existant. Ne pas réinitialiser Git, supprimer ou
+   réécrire massivement des fichiers.
+3. Distinguer les décisions confirmées des questions ouvertes et de la vision
+   post-bêta. Ne pas réintroduire la WishList comme fonctionnalité indécise ni
+   inclure le suivi des prix dans le périmètre bêta.
+4. Avant de choisir une pile ou une dépendance importante, comparer les options
+   pertinentes selon la maintenabilité, la sécurité, l’accessibilité, le coût
+   et l’adéquation au projet.
+5. Traiter sécurité, confidentialité, permissions et migrations de données
+   comme des exigences de conception.
+6. Ne pas ajouter de secrets, identifiants ou données personnelles réelles.
+7. Ne pas effectuer de commit ni de push sans demande explicite.
+8. Vérifier réellement les changements et les commandes avant d’en rapporter
+   les résultats. Signaler les ambiguïtés qui bloquent une décision.
