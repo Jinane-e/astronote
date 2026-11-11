@@ -1,82 +1,98 @@
-# Roadmap produit
+# Roadmap produit AstroNote
 
-> Roadmap initiale. Les priorités et le périmètre pourront changer à partir
-> des retours des premiers utilisateurs.
+> Brouillon de mise à jour documentaire. Les priorités sont exprimées sans
+> calendrier : aucun jalon ni ordre de livraison plus précis n’a été confirmé.
+> Le contenu décrit le périmètre souhaité, pas l’état d’implémentation.
 
-## Phase 0 — Cadrage et fondations
+## Modèle bêta
 
-- Confirmer les scénarios principaux de la bêta.
-- Définir les utilisateurs, les données et les risques de sécurité.
-- Choisir la pile technique après comparaison documentée des options.
-- Définir architecture, stratégie de tests et conventions Git.
-- Mettre en place dépôt, CI, documentation et environnements.
+**Espace → Sphère → Capsule**
 
-## Phase 1 — Socle de la bêta
+- **Espace** : grand contexte.
+- **Sphère** : sujet ou domaine dans un Espace.
+- **Capsule** : unité fonctionnelle rattachée à une Sphère.
 
-- Créer et consulter des Espaces.
-- Créer et consulter des Sphères dans un Espace.
-- Ajouter et organiser des Capsules dans une Sphère.
-- Assurer une navigation claire entre les niveaux.
-- Séparer les données par Espace côté interface et côté autorisations.
-- Créer une interface responsive et cohérente sur les plateformes retenues.
+## Périmètre confirmé pour la bêta
 
-## Phase 2 — Capsules bêta retenues
+### 1. Socle d’organisation
 
-### Todo
-- Gérer des tâches sous forme de liste.
-- Étudier ou intégrer une vue Kanban si elle reste raisonnable pour la bêta.
-- Définir les propriétés minimales des tâches et leur rattachement au contexte.
+- Créer et consulter des Espaces, des Sphères et des Capsules.
+- Naviguer entre ces niveaux en conservant un contexte compréhensible.
+- Définir les frontières de données et les contrôles d’accès avant de permettre
+  le partage. Le détail des rôles et de l’héritage des permissions reste à
+  spécifier.
 
-### Agenda
-- Consulter et organiser des événements ou éléments planifiés.
-- Préciser les vues, rappels, récurrences et éventuelles intégrations avant
-  d’engager leur développement.
+### 2. Capsules
 
-### Référentiel d’outils en ligne
-- Enregistrer une URL et les informations utiles associées.
-- Classer avec des tags.
-- Marquer comme favori ou usage fréquent.
-- Ajouter un statut « à tester ».
-- Retrouver les outils depuis les Sphères pertinentes.
-- Définir si une même entrée peut être associée à plusieurs Sphères.
+#### Todo
 
-### WishList
-- Une liste orientée WishList a été préférée à un module de notes trop général.
-- **À confirmer comme élément ferme du périmètre bêta** : sa présence a été
-  évoquée, mais n’a pas encore été arrêtée avec le même degré de précision que
-  Todo, Agenda et le Référentiel.
+Capsule de gestion de tâches. Les champs, états, filtres et présentation (liste,
+kanban ou autre) ne sont pas définis dans les éléments disponibles.
 
-## Phase 3 — Validation et finition bêta
+#### Agenda
 
-- Ajouter des tests aux parcours principaux et aux frontières de permissions.
-- Vérifier accessibilité, ergonomie clavier et affichage mobile.
-- Tester sauvegarde, restauration, export et suppression selon les décisions
-  prises au cadrage.
-- Corriger les défauts bloquants et documenter les limites connues.
-- Inviter un petit groupe de testeurs et recueillir leurs retours.
-- Ajuster priorités et expérience selon les usages observés.
+Capsule d’organisation d’éléments planifiés. Les vues, récurrences, rappels et
+intégrations éventuelles restent à spécifier.
 
-## Vision post-bêta — non incluse par défaut
+#### Référentiel d’outils en ligne
 
-- Mode Focus.
-- Partage avancé et gestion complète des droits.
-- Personnalisation étendue des portails, widgets et thèmes.
-- Agrégations de données entre Sphères et au niveau d’un Espace.
-- Galerie et gestion de contenus plus riche.
-- Comptes, coffre-fort et gestion de mots de passe.
-- Budgétisation et fonctionnalités financières.
-- Notes structurées, si leur rôle est distinct des autres Capsules.
-- Extensions et intégrations tierces.
-- Écosystème de Capsules plus ouvert.
+Capsule pour enregistrer et retrouver des sites ou outils en ligne. Les champs,
+classement et statuts détaillés sont à confirmer avant implémentation.
 
-## Critères de sortie de bêta
+#### WishList — confirmée pour la bêta
 
-À préciser avant la mise à disposition. Proposition initiale :
+Capsule de souhaits présentée comme un **moodboard / tableau d’inspiration de
+type Pinterest**. Une entrée comprend les éléments suivants, selon la demande
+produit confirmée :
 
-- Les utilisateurs pilotes peuvent créer et retrouver leurs Espaces, Sphères et
-  Capsules sans aide.
-- Les parcours des Capsules retenues fonctionnent de bout en bout.
-- Les frontières entre Espaces et les permissions sont testées.
-- Les défauts critiques de sécurité et de données sont corrigés.
-- La documentation d’installation, d’utilisation et de contribution est à jour.
-- Les limites connues sont consignées.
+- un titre ;
+- un ou plusieurs liens ;
+- une ou plusieurs images, avec une image principale et des images secondaires
+  ou alternatives ;
+- des détails associés.
+
+Le mode d’affichage souhaité est visuel et orienté moodboard. La présence de
+la WishList dans le périmètre bêta est arrêtée ; seuls les comportements précis
+(restauration, tri, collections, champs obligatoires, limites de liens/images,
+stockage ou provenance des images, partage) restent à spécifier ; ils ne sont
+pas supposés ici.
+
+**Suivi des prix : post-bêta.** Ne pas l’inclure dans les tâches ou critères de
+livraison bêta, ni supposer une collecte automatique de prix.
+
+## Travail de cadrage restant
+
+- Décrire les parcours principaux et les critères d’acceptation pour chaque
+  Capsule, notamment l’ajout, la consultation et la modification d’une entrée
+  WishList.
+- Définir les champs et règles de validation de Todo, Agenda et du Référentiel.
+- Pour la WishList, préciser les règles de gestion des images et des liens sans
+  élargir implicitement le périmètre au suivi de prix.
+- Spécifier l’authentification, le partage et les permissions nécessaires à la
+  bêta, ou confirmer explicitement les limites de la première version.
+- Choisir la stack et l’architecture après examen du dépôt et comparaison des
+  options pertinentes.
+- Définir sauvegarde, export, suppression, sécurité, tests et critères de sortie.
+
+## Après la bêta — hors périmètre bêta confirmé
+
+- Suivi des prix de la WishList.
+- Fonctionnalités plus avancées, intégrations ou automatisations, sous réserve
+  d’une décision ultérieure.
+- Les autres pistes à long terme décrites dans le concept ne constituent pas un
+  engagement de livraison.
+
+## Validation de la bêta
+
+Les critères de sortie restent à décider. À établir notamment : parcours
+fonctionnels de bout en bout pour les Capsules retenues, tests des frontières
+de données et des permissions, vérifications de sécurité et de qualité, et
+documentation d’installation et d’utilisation correspondant effectivement au
+projet.
+
+## Limites de cette mise à jour
+
+Les fichiers et l’historique du dépôt n’ont pas été audités : l’état du code,
+les tâches achevées, la configuration, les tests, les dépendances et le statut
+de chaque fonctionnalité sont invérifiables ici. Cette roadmap est un brouillon
+prêt à intégrer et à confronter au dépôt, non un relevé d’avancement.
